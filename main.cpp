@@ -60,9 +60,6 @@ int main() {
 
     int NumberofPlayers = PlayerCreation(GameAnalysis);
     
-    string HighScoreWinner;
-    int HighestScore = 0;    
-    
 
     return 0;
 }
