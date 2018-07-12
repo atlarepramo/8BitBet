@@ -1,16 +1,11 @@
 # 8BitBet
-To do: Successfully create Player initilzation.
-        This will allow user to input the number of players who will be playing the game. 
-         For each player define: name
-                                 bet on the final score of a round
-                                 bet on what will be the cause of death
-                                 bet on number of clouds in foreground
-        
-        After Player initilzation is completed need to allow for inputs for: Final score of round, cause of death, # of clouds.
-        These inputs will serve as the proxy until the game development is complete and we figure out how to send these inputs 
-        to our source code from the game.
+Done: create Player initialization
 
-        Lastly, we need to create the code that compares the definitions in the Player Class for final score, CoD, and Cloud#.
+To do: create comparison functions to determine winner based on Player Class inputs. (ex. High scores, # of Clouds, CoD, etc.)
+        
+        
+      
+        We need to create the code that compares the definitions in the Player Class for final score, CoD, and Cloud#.
         The code will need to declare winners of main bets and side bets. 
         Main bet is whoever had the highest score in the game between all players, side bets are the three aforementioned         
           variables.
