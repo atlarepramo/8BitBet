@@ -2,12 +2,13 @@
 //  main.cpp
 //  GameRoughDraft
 //
-//  Created by Rachel Montoya on 7/5/18.
-//  Copyright © 2018 Rachel Montoya. All rights reserved.
+//  Created by Rachel Montoya & Omar Peralta on 7/12/18.
+//  Copyright © 2018 Rachel Montoya & Omar Peralta. All rights reserved.
 //
 
 #include <iostream>
 #include <string>
+#include<vector>
 using namespace std;
 
 class Player {
@@ -19,7 +20,7 @@ public:
     int CloudsPresent;
 };
 
-void PlayerCreation(){
+int PlayerCreation(vector<Player>& container){
     int NumberOfPlayers = 0;
     
     cout << "How many players in this game?" << endl;
@@ -28,9 +29,13 @@ void PlayerCreation(){
     Player Player[NumberOfPlayers];
     
     for(int i = 0; i < NumberOfPlayers; i++) {
+
         cout << "What is Player " << i + 1 << "'s name?" << endl;
         cin >> Player[i].Name;
         
+        cout << "What is Player" << i + 1 << "'s high score?" <<endl;   
+        cin >> Player[i].HighScore;
+
         cout << "What is your score bet?" << endl;
         cin >> Player[i].ScoreBet;
         
@@ -41,11 +46,23 @@ void PlayerCreation(){
         cin >> Player[i].CloudsPresent;
         
     }
+
+    for(int y = 0; y < NumberOfPlayers; y++) {
+        container.push_back(Player[y]);
+    }
+
+    return NumberOfPlayers;
 }
 
-
 int main() {
-    PlayerCreation();
+
+    vector <Player> GameAnalysis;
+
+    int NumberofPlayers = PlayerCreation(GameAnalysis);
     
+    string HighScoreWinner;
+    int HighestScore = 0;    
+    
+
     return 0;
 }
